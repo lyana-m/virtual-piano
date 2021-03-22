@@ -74,7 +74,8 @@ function playAudioOnKeyboard(event) {
 }
 
 function addClassActive2(event) {
-  let key = document.querySelector(`[data-letter=${event.key.toUpperCase()}]`);
+  // let key = document.querySelector(`[data-letter=${event.key.toUpperCase()}]`);
+  let key = document.querySelector(`[data-letter=${event.code[3]}]`);
   if (key) {
     key.classList.add('piano-key-active');
     key.classList.add('piano-key-active-pseudo');
